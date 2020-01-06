@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baomidou.test.user.store.mapper.UserMapper">
+
+    <resultMap id="pageListResultMap" type="com.baomidou.test.user.store.domain.User">
+        <id  property="id" column="id"  />
+        <result column="name" property="name" />
+        <result column="age" property="age" />
+        <result column="email" property="email" />
+    </resultMap>
+
+
+    <select id="selectOneByName" resultType="com.baomidou.test.user.store.domain.User">
+            select id,name,age,email from user where 1=1
+            <if test="name!=null">
+                and name like concat('%',#{name},'%')
+            </if>
+            order by age desc
+            limit 1;
+    </select>
+
+    <delete id="deleteUserByCondition">
+        delete from user where id in
+        <if test="listId!=null">
+            <foreach collection="listId" item = "id" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+        </if>
+    </delete>
+</mapper>
