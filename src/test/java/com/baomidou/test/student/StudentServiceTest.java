@@ -23,4 +23,6 @@ public class StudentServiceTest extends BaseTest {
         JSONResult listByStuId = getListByStuId.getListByStuId(sId);
         System.out.println(listByStuId.getData());
     }
+
+
 }

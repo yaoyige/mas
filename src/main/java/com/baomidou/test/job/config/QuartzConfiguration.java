@@ -4,7 +4,6 @@ import com.baomidou.test.job.DailyJob;
 import com.baomidou.test.job.MyCronJob;
 import com.baomidou.test.job.MyJob;
 import org.quartz.*;
-import org.quartz.spi.MutableTrigger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,7 +13,7 @@ import static org.quartz.DailyTimeIntervalScheduleBuilder.dailyTimeIntervalSched
 /**
  * @Auther: yyg
  * @Date: 2020/1/4 09:48
- * @Description:
+ * @Description:   Quartz 整合包(定时任务)
  */
 @Configuration
 public class QuartzConfiguration {

@@ -59,4 +59,12 @@ public interface UserService extends IService<User> {
       * @date: 2020/1/2 15:41
       */
      JSONResult deleteUserByCondition(String condition);
+
+     /**
+      * 是否可以持续访问某一个接口
+      * @param name 接口名称
+      * @return:
+      * @date: 2020/1/6 10:00
+      */
+     JSONResult isPersistentProvider(String name);
 }

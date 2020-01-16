@@ -1,0 +1,10 @@
+com\baomidou\test\common\CodeGenerator$1.class
+com\baomidou\test\common\CodeGenerator.class
+com\baomidou\test\MASApplication.class
+com\baomidou\test\user\service\UserService.class
+com\baomidou\test\user\controller\UserController.class
+com\baomidou\test\user\service\impl\UserServiceImpl.class
+com\baomidou\test\common\CodeGenerator$2.class
+com\baomidou\test\user\store\domain\User.class
+com\baomidou\test\user\store\mapper\UserMapper.class
+com\baomidou\test\common\config\MybatisPlusConfig.class
